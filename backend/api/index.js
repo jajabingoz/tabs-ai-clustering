@@ -9,11 +9,18 @@ const { Pool } = require('pg');
 
 const app = express();
 
-// Database connection
+// Database connection - POSTGRES_URL takes precedence over DATABASE_URL
+const dbUrl = process.env.POSTGRES_URL || process.env.DATABASE_URL;
 const pool = new Pool({
-  connectionString: process.env.POSTGRES_URL || process.env.DATABASE_URL,
+  connectionString: dbUrl,
   ssl: { rejectUnauthorized: false }
 });
+
+// Log which connection is being used (for debugging)
+if (dbUrl) {
+  const hostname = dbUrl.includes('@') ? dbUrl.split('@')[1]?.split(':')[0] : 'unknown';
+  console.log(`[Database] Connected to: ${hostname}`);
+}
 
 // Middleware
 app.use(helmet());
