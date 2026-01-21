@@ -1,0 +1,55 @@
+{
+  "manifest_version": 2,
+  "name": "TabsAI - Smart Tab Clustering",
+  "version": "1.0.0",
+  "description": "AI-powered tab summarization and intelligent clustering for better productivity",
+  
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tabsai@productivity.extension",
+      "data_collection_permissions": {
+        "required": ["websiteActivity"]
+      }
+    }
+  },
+  
+  "permissions": [
+    "tabs",
+    "storage",
+    "activeTab"
+  ],
+  
+  "background": {
+    "scripts": ["src/background.js"],
+    "persistent": false
+  },
+  
+  "browser_action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "TabsAI - Organize Your Tabs",
+    "default_icon": {
+      "16": "icons/icon-16.svg",
+      "32": "icons/icon-32.svg",
+      "48": "icons/icon-48.svg",
+      "128": "icons/icon-128.svg"
+    }
+  },
+  
+  "sidebar_action": {
+    "default_panel": "src/sidebar/sidebar.html",
+    "default_title": "TabsAI Clusters"
+  },
+  
+  "icons": {
+    "16": "icons/icon-16.svg",
+    "32": "icons/icon-32.svg",
+    "48": "icons/icon-48.svg",
+    "128": "icons/icon-128.svg"
+  },
+  
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  
+  "web_accessible_resources": [
+    "src/content/content.css"
+  ]
+}

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: tabsai-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        value: your-production-jwt-secret-here
+      - key: GROQ_API_KEY
+        value: gsk_your_groq_api_key_here
+      - key: ALLOWED_ORIGINS
+        value: moz-extension://,chrome-extension://

@@ -1,0 +1,35 @@
+{
+  "name": "tabsai-smart-clustering",
+  "version": "1.0.0",
+  "description": "AI-powered Firefox extension for intelligent tab summarization and clustering",
+  "private": true,
+  "scripts": {
+    "build": "web-ext build --source-dir . --artifacts-dir ./dist",
+    "dev": "web-ext run --source-dir .",
+    "lint": "web-ext lint --source-dir .",
+    "package": "npm run build && cd dist && zip -r ../tabsai-extension.zip *.zip",
+    "test": "echo 'No tests configured yet'"
+  },
+  "keywords": [
+    "firefox",
+    "extension",
+    "ai",
+    "tabs",
+    "clustering",
+    "productivity",
+    "groq"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "web-ext": "^7.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/tabs-ai-clustering.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/tabs-ai-clustering/issues"
+  },
+  "homepage": "https://github.com/yourusername/tabs-ai-clustering#readme"
+}
