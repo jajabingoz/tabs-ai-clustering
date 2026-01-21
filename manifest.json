@@ -16,7 +16,8 @@
   "permissions": [
     "tabs",
     "storage",
-    "activeTab"
+    "activeTab",
+    "https://tabs-ai-clustering.vercel.app/*"
   ],
   
   "background": {

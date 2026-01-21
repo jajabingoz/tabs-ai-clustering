@@ -1,6 +1,6 @@
 class BackendAPIService {
   constructor() {
-    this.baseUrl = 'https://tab-ai-clustering.vercel.app';
+    this.baseUrl = 'https://tabs-ai-clustering.vercel.app';
     this.token = null;
   }
 

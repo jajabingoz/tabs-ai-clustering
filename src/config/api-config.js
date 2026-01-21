@@ -1,7 +1,7 @@
 // API Configuration
 const API_CONFIG = {
   // Update this with your deployed backend URL
-  PRODUCTION_API: 'https://your-backend.railway.app', // Replace with your actual URL
+  PRODUCTION_API: 'https://tabs-ai-clustering.vercel.app', // Vercel production deployment
   
   // For local development
   DEVELOPMENT_API: 'http://localhost:3000',
